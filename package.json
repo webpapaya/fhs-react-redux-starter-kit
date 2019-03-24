@@ -11,10 +11,12 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
+    "start": "concurrently -n app,storybook 'yarn start:app' 'yarn start:storybook'",
+    "start:app": "react-scripts start",
     "start:storybook": "start-storybook -p 9009 -s public",
+    "build": "concurrently -n app,storybook 'yarn build:app' 'yarn build:storybook'",
+    "build:app": "react-scripts build",
     "build:storybook": "build-storybook -s storybook"
   },
   "eslintConfig": {
@@ -32,6 +34,7 @@
     "@storybook/addon-links": "^5.0.4",
     "@storybook/addons": "^5.0.4",
     "@storybook/react": "^5.0.4",
-    "babel-loader": "^8.0.5"
+    "babel-loader": "^8.0.5",
+    "concurrently": "^4.1.0"
   }
 }
