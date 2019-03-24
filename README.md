@@ -12,20 +12,39 @@ It includes React/Redux/Storybook and was bootstrapped with [Create React App](h
 - Node 8.10 or later
   - Windows https://github.com/coreybutler/nvm-windows
   - OSX/Linux https://github.com/creationix/nvm
-- yarn
 
-## Available Scripts
-
-In the project directory, you can run:
+# Setup
 
 ```
-yarn start # starts storybook and the react app
-yarn start:app # starts the react app
-yarn start:storybook # starts storybook
+git clone git@github.com:webpapaya/fhs-react-redux-starter-kit.git
+npm install
+npm run start
+```
 
-yarn build # builds storybook and the react app
-yarn build:app # builds the react app
-yarn build:storybook # builds storybook
+# Available Scripts
 
-yarn test # runs tests
+```
+npm run start # starts storybook and the react app
+npm run start:app # starts the react app
+npm run start:storybook # starts storybook
+
+npm run build # builds storybook and the react app
+npm run build:app # builds the react app
+npm run build:storybook # builds storybook
+
+npm run test # runs tests
+```
+
+# Folder Structure
+
+```
+├── build                     # app build
+├── storybook-static          # storybook build
+├── public                    # public assets (favicon, ...)
+├── src                       # Application Code
+│ ├── action-creators           # Redux action creators
+│ ├── components                # Components which could be reused in other applications
+│ ├── containers                # Components which can't be reused in other applications
+│ └── reducers                  # Redux reducers
+└── yarn.lock
 ```
