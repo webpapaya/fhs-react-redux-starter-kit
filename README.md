@@ -38,6 +38,7 @@ npm run test # runs tests
 # Folder Structure
 
 ```
+├── .storybook                # storybook configuration
 ├── build                     # app build
 ├── storybook-static          # storybook build
 ├── public                    # public assets (favicon, ...)
