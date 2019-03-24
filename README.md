@@ -33,6 +33,8 @@ npm run build:app # builds the react app
 npm run build:storybook # builds storybook
 
 npm run test # runs tests
+npm run lint # lints files
+npm run lint -- --fix # lints files and automatically fixes errors
 ```
 
 # Folder Structure

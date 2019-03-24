@@ -17,7 +17,8 @@
     "start:storybook": "start-storybook -p 9009 -s public",
     "build": "concurrently -n app,storybook 'yarn build:app' 'yarn build:storybook'",
     "build:app": "react-scripts build",
-    "build:storybook": "build-storybook -s storybook"
+    "build:storybook": "build-storybook -s storybook",
+    "lint": "semistandard"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,6 +36,7 @@
     "@storybook/addons": "^5.0.4",
     "@storybook/react": "^5.0.4",
     "babel-loader": "^8.0.5",
-    "concurrently": "^4.1.0"
+    "concurrently": "^4.1.0",
+    "semistandard": "^13.0.1"
   }
 }
