@@ -1,4 +1,12 @@
 import React from 'react'
-const App = () => <div>Your React/Redux Application</div>
+import MoneyTransactionList from './containers/money-transaction-list'
+import Total from './containers/total'
 
-export default App
+export default () => {
+  return (
+    <>
+      <Total />
+      <MoneyTransactionList minAmount={10} />
+    </>
+  )
+}

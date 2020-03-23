@@ -10,4 +10,6 @@ const store = createStore(
   )
 )
 
+global.store = store
+
 export default store
