@@ -2,17 +2,17 @@ import { combineReducers } from 'redux'
 
 const initialState = []
 const rootReducer = combineReducers({
-  moneyTransactions: (previousState = initialState, action) => {
-    switch (action.type) {
-      case 'createMoneyTransaction/success':
-        return [...previousState, action.payload]
-      case 'reset':
-        return initialState
+  users: (state = initialState, action) => {
+    switch(action.type) {
+      case 'fetchUsers/success':
+        return [...state, ...action.payload]
+      case 'createUser/success':
+        return [...state, action.payload]
       default:
-        return previousState
-    };
+        return state
+    }
   },
-  user: () => []
+  moneyTransactions: () => []
 })
 
 export default rootReducer
