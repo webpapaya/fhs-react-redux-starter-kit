@@ -9,11 +9,4 @@ describe('Button', () => {
     const { container } = render(<Button>{givenText}</Button>)
     expect(queryByText(container, givenText)).toBeTruthy()
   })
-
-  it('onClick calls given function', () => {
-    const onClick = jest.fn()
-    const { container } = render(<Button onClick={onClick}>A Button</Button>)
-    fireEvent.click(container.querySelector('button'))
-    expect(onClick).toHaveBeenCalledTimes(1)
-  })
 })
