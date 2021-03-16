@@ -1,4 +1,5 @@
 import React from 'react'
-const App = () => <div>Your React/Redux Application</div>
+import { MoneyTransaction } from './containers/money-transactions/index'
+const App = () => <div><MoneyTransaction /></div>
 
 export default App

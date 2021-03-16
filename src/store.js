@@ -10,4 +10,13 @@ const store = createStore(
   )
 )
 
+window.store = store
+window.fetchUsersActionCreator = () => async (dispatch) => {
+  const userResponse = await fetch('http://localhost:3001/user').then((response) => response.json())
+  dispatch({
+    type: 'users/fetched',
+    payload: userResponse
+  })
+}
+
 export default store
