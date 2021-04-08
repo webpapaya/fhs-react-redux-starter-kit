@@ -1,0 +1,81 @@
+{
+  "money-transaction": [
+    {
+      "id": 1,
+      "creditorId": 1,
+      "debitorId": 2,
+      "amount": 10,
+      "paidAt": null
+    },
+    {
+      "id": 2,
+      "creditorId": 3,
+      "debitorId": 1,
+      "amount": 11.2,
+      "paidAt": "2000-01-01T00:00:00+01+00"
+    },
+    {
+      "id": "f0188e79-80f1-4f72-8d79-a60c84680989",
+      "creditorId": 2,
+      "debitorId": 1,
+      "amount": 100,
+      "paidAt": null
+    },
+    {
+      "id": "b2b40292-70ab-4f74-8cc0-b4059475053d",
+      "creditorId": 2,
+      "debitorId": 1,
+      "amount": 100,
+      "paidAt": null
+    },
+    {
+      "id": "c96719c7-bad9-4f7d-b8d4-d96d92b2a583",
+      "creditorId": 2,
+      "debitorId": 1,
+      "amount": 100,
+      "paidAt": null
+    },
+    {
+      "id": "ef5e4562-b0c9-49b3-8124-a763ded71c5d",
+      "creditorId": 2,
+      "debitorId": 1,
+      "amount": 100,
+      "paidAt": null
+    },
+    {
+      "id": "014ea300-d7d2-4061-98d0-9005c3267c6c",
+      "creditorId": 2,
+      "debitorId": 1,
+      "amount": 100,
+      "paidAt": null
+    },
+    {
+      "id": "ea457b9d-b56e-4a45-9de9-83c43fc6e1f9",
+      "creditorId": 2,
+      "debitorId": 1,
+      "amount": 100,
+      "paidAt": null
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "name": "Sepp"
+    },
+    {
+      "id": 2,
+      "name": "Mike"
+    },
+    {
+      "id": 3,
+      "name": "Fabian"
+    },
+    {
+      "id": "a7144000-362b-4d91-ba24-ee6e9050ed1e",
+      "creditorId": 2,
+      "debitorId": 1,
+      "amount": 100,
+      "paidAt": null
+    }
+  ]
+}
