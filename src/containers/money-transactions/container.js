@@ -1,5 +1,6 @@
 import { connect } from "react-redux"
 import { MoneyTransaction } from "./presentation"
+import '../../domain/money-transactions/action-creator'
 
 const mapStateToProps = (state) => {
   return {
