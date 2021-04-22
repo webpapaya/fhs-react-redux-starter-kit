@@ -1,3 +1,6 @@
+import firebase from 'firebase'
+import 'firebase/auth'
+
 const firebaseConfig = {
   apiKey: "AIzaSyBaUKK6ikaiYN98xIiQiCV-wPIaPCNS26Y",
   authDomain: "full-stack-development-a2479.firebaseapp.com",
@@ -8,3 +11,11 @@ const firebaseConfig = {
   appId: "1:338202513827:web:7ecd7edebc5641f9deca16",
   measurementId: "G-QZ6VWV6785"
 };
+
+firebase.initializeApp(firebaseConfig)
+
+export const auth = firebase.auth()
+
+if (process.env.NODE_ENV === 'development') {
+  auth.useEmulator('http://localhost:9099')
+}

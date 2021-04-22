@@ -1,0 +1,73 @@
+[debug] [2021-04-22T19:21:09.669Z] ----------------------------------------------------------------------
+[debug] [2021-04-22T19:21:09.670Z] Command:       /Users/tmayrhofer/.nvm/versions/node/v15.3.0/bin/node /Users/tmayrhofer/Projects/fhs-react-start-kit/node_modules/.bin/firebase emulators:start
+[debug] [2021-04-22T19:21:09.671Z] CLI Version:   9.10.0
+[debug] [2021-04-22T19:21:09.671Z] Platform:      darwin
+[debug] [2021-04-22T19:21:09.671Z] Node Version:  v15.3.0
+[debug] [2021-04-22T19:21:09.672Z] Time:          Thu Apr 22 2021 21:21:09 GMT+0200 (Central European Summer Time)
+[debug] [2021-04-22T19:21:09.672Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-04-22T19:21:09.677Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-04-22T19:21:09.678Z] > authorizing via signed-in user (webpapaya@gmail.com)
+[info] i  emulators: Starting emulators: auth, database, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, database, hosting"}}
+[warn] ⚠  emulators: It seems that you are running multiple instances of the emulator suite for project full-stack-183618. This may result in unexpected behavior. 
+[debug] [2021-04-22T19:21:09.776Z] [hub] writing locator at /var/folders/fl/t3v9dsz92yn0ptnh8tm2zzmw0000gn/T/hub-full-stack-183618.json
+[debug] [2021-04-22T19:21:09.808Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/full-stack-183618 [none]
+[debug] [2021-04-22T19:21:10.229Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/full-stack-183618 200
+[debug] [2021-04-22T19:21:10.229Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/full-stack-183618 {"projectId":"full-stack-183618","projectNumber":"17054055795","displayName":"Full Stack Development","name":"projects/full-stack-183618","resources":{"hostingSite":"full-stack-183618","realtimeDatabaseInstance":"full-stack-183618-default-rtdb"},"state":"ACTIVE"}
+[debug] [2021-04-22T19:21:10.229Z] database rules config:  [{"instance":"full-stack-183618-default-rtdb","rules":"/Users/tmayrhofer/Projects/fhs-react-start-kit/database.rules.json"}]
+[debug] [2021-04-22T19:21:10.231Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2021-04-22T19:21:10.231Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2021-04-22T19:21:10.232Z] Ignoring unsupported arg: rules {"metadata":{"emulator":{"name":"database"},"message":"Ignoring unsupported arg: rules"}}
+[debug] [2021-04-22T19:21:10.232Z] Starting Database Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","/Users/tmayrhofer/.cache/firebase/emulators/firebase-database-emulator-v4.7.2.jar","--host","localhost","--port",9000],"optionalArgs":["port","host","functions_emulator_port","functions_emulator_host"],"joinArgs":false} {"metadata":{"emulator":{"name":"database"},"message":"Starting Database Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"/Users/tmayrhofer/.cache/firebase/emulators/firebase-database-emulator-v4.7.2.jar\",\"--host\",\"localhost\",\"--port\",9000],\"optionalArgs\":[\"port\",\"host\",\"functions_emulator_port\",\"functions_emulator_host\"],\"joinArgs\":false}"}}
+[info] i  database: Database Emulator logging to database-debug.log {"metadata":{"emulator":{"name":"database"},"message":"Database Emulator logging to \u001b[1mdatabase-debug.log\u001b[22m"}}
+[debug] [2021-04-22T19:21:12.544Z] WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/Users/tmayrhofer/.cache/firebase/emulators/firebase-database-emulator-v4.7.2.jar) to field sun.nio.ch.SelectorImpl.selectedKeys
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release {"metadata":{"emulator":{"name":"database"},"message":"WARNING: An illegal reflective access operation has occurred\nWARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/Users/tmayrhofer/.cache/firebase/emulators/firebase-database-emulator-v4.7.2.jar) to field sun.nio.ch.SelectorImpl.selectedKeys\nWARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil\nWARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations\nWARNING: All illegal access operations will be denied in a future release"}}
+[debug] [2021-04-22T19:21:12.545Z] 
+ {"metadata":{"emulator":{"name":"database"},"message":"\n"}}
+[debug] [2021-04-22T19:21:15.061Z] 21:21:15.059 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+ {"metadata":{"emulator":{"name":"database"},"message":"21:21:15.059 [NamespaceSystem-akka.actor.default-dispatcher-4] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started\n"}}
+[debug] [2021-04-22T19:21:15.570Z] 21:21:15.567 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000
+ {"metadata":{"emulator":{"name":"database"},"message":"21:21:15.567 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000\n"}}
+[debug] [2021-04-22T19:21:23.179Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/full-stack-183618/webApps/-/config [none]
+[debug] [2021-04-22T19:21:23.949Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/full-stack-183618/webApps/-/config 200
+[debug] [2021-04-22T19:21:23.949Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/full-stack-183618/webApps/-/config {"projectId":"full-stack-183618","databaseURL":"https://full-stack-183618-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"full-stack-183618.appspot.com","apiKey":"AIzaSyA7dqB6jxs9yh9fh8Ff77MRjxnP5QRkd8s","authDomain":"full-stack-183618.firebaseapp.com","messagingSenderId":"17054055795"}
+[info] i  hosting: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] ✔  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[debug] [2021-04-22T19:21:23.987Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2021-04-22T19:21:23.988Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2021-04-22T19:21:23.988Z] Starting Emulator UI with command {"binary":"node","args":["/Users/tmayrhofer/.cache/firebase/emulators/ui-v1.4.2/server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/tmayrhofer/.cache/firebase/emulators/ui-v1.4.2/server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2021-04-22T19:21:24.136Z] Web / API server started at http://localhost:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at http://localhost:4000\n"}}
+[debug] [2021-04-22T19:21:24.267Z] >>> HTTP REQUEST PUT http://localhost:9000/.settings/rules.json?ns=full-stack-183618-default-rtdb  
+ {
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": false,
+    ".write": false
+  }
+}
+[debug] [2021-04-22T19:21:25.349Z] <<< HTTP RESPONSE 200 {"content-length":"15","content-type":"application/json; charset=utf-8","access-control-allow-origin":"*","cache-control":"no-cache","x-firebase-project-id":"full-stack-183618-default-rtdb","x-firebase-project-number":"123456789","x-firebase-uuid":"b660a52c-a2bc-451c-8f6e-a9726e22e29b"}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://localhost:4000                │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬────────────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI            │
+├────────────────┼────────────────┼────────────────────────────────┤
+│ Authentication │ localhost:9099 │ http://localhost:4000/auth     │
+├────────────────┼────────────────┼────────────────────────────────┤
+│ Database       │ localhost:9000 │ http://localhost:4000/database │
+├────────────────┼────────────────┼────────────────────────────────┤
+│ Hosting        │ localhost:5000 │ n/a                            │
+└────────────────┴────────────────┴────────────────────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
