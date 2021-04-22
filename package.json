@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "firebase-tools": "^9.9.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
@@ -14,8 +15,10 @@
   "scripts": {
     "start:server": "json-server --watch db.json --port 3001",
     "test": "react-scripts test",
-    "start": "concurrently -n app,storybook 'yarn start:app' 'yarn start:storybook'",
-    "start:app": "react-scripts start",
+    "start:emulators": "firebase emulators:start",
+    "start": "concurrently -n firebase,app,storybook 'npm run start:emulators' 'npm run start:app' 'npm run start:storybook'",
+
+
     "start:storybook": "start-storybook -p 9009 -s public",
     "build": "concurrently -n app,storybook 'yarn build:app' 'yarn build:storybook'",
     "build:app": "react-scripts build",

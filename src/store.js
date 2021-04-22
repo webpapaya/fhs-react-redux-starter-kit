@@ -1,6 +1,7 @@
 import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import rootReducer from './reducers'
+import {auth} from './firebase'
 
 const store = createStore(
   rootReducer,
@@ -27,5 +28,6 @@ window.fetchMoneyTransactionsActionCreator = () => async (dispatch) => {
   })
 }
 
+window.auth = auth
 
 export default store
