@@ -1,9 +1,11 @@
 import React from 'react'
+import { SignIn } from './components/SignIn'
+import './styles/global.css'
 
-function App () {
+function App() {
   return (
     <div>
-        A React Application
+      <SignIn />
     </div>
   )
 }
