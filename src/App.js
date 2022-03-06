@@ -1,11 +1,11 @@
 import React from 'react'
-import { SignIn } from './components/SignIn'
+import { MoneyTransaction } from './components/moneyTransaction'
 import './styles/global.css'
 
 function App() {
   return (
     <div>
-      <SignIn />
+      <MoneyTransaction />
     </div>
   )
 }
