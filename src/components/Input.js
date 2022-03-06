@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './Input.module.css'
+import style from '../styles/Input.module.css'
 
 export const Input = ({ className, name, id, value, onChange, ...rest }) => {
   return (

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Button } from './Button'
 import { Input } from './Input'
 
-import styles from './SignIn.module.css'
+import styles from '../styles/SignIn.module.css'
 
 export const SignIn = () => {
   const [username, setUsername] = useState('')
