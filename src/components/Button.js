@@ -9,3 +9,13 @@ export const Button = ({ onClick, children }) => {
   </button>
   )
 }
+
+export const InfoButton = ({ onClick, children }) => {
+  console.log(onClick)
+  return (
+  <button onClick={onClick} className={`${styles.button} ${styles.primary} ${styles.info}`}>
+    {children}
+  </button>
+  )
+}
+
