@@ -1,9 +1,10 @@
 .button {
     /* button reset */
     border: none;
-    margin: 0;
+    margin-top: 20px;
     padding: 0;
-    width: auto;
+    width: 90vw;
+    width: 300px;
     overflow: visible;
     text-decoration: none;
 
@@ -27,8 +28,7 @@
     font-weight: 400;
     transition: all 200ms;
 
-    border-radius: 9999px;
-    padding: 5px 15px;
+    padding: 15px 5px;
 
     display: inline-flex;
     justify-content: center;
@@ -43,6 +43,9 @@
 }
 
 .primary {
-  color: #ffffff;
-  background: #2268FF;
+  color: black;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+  background: none;
 }
