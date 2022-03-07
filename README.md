@@ -1,6 +1,6 @@
 # FHS React/Redux Starter Kit
 
-by Matthias Oberholzer @motcodes
+by Matthias Oberholzer [@motcodes](https://twitter.com/motcodes)
 
 This a starter kit for students of the University of Applied Sciences Salzburg, for the lectures:
 
