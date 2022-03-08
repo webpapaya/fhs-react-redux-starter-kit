@@ -8,9 +8,10 @@ export const SignIn = () => (
         <form className={styles.signinformular}>
             <InputField type="email" name="email" title="Email"/>
             <InputField type="password" name="password" title="Password"/>
-            <Button>
+            <Button isPrimary={true}>
                 Sign In
             </Button>
+            <Button isPrimary={false}> Sign Up </ Button>
         </form>
     </div>
 )
