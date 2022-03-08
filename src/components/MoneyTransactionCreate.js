@@ -6,9 +6,9 @@ import { DecimalInput } from './DecimalInput'
 
 export const MoneyTransactionCreate = () => {
   const users = [
-    { value: '1', label: 'Claudia' },
-    { value: '2', label: 'Juliane' },
-    { value: '3', label: 'Kerstin' }
+    { id: '1', name: 'Claudia' },
+    { id: '2', name: 'Juliane' },
+    { id: '3', name: 'Kerstin' }
   ]
 
   const handleSubmit = (e) => {

@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     height: 120px;
+    gap: 20px;
 }
 
 .buttonWrapper {
@@ -9,5 +10,5 @@
     flex-direction: column;
     height: 100%;
     justify-content: flex-end;
-    width: 120px;
+    width: 312px;
 }
