@@ -2,10 +2,8 @@
     /* button reset */
     border: none;
     margin-top: 20px;
-    padding: 0;
-    width: 90vw;
-    width: 312px;
     overflow: visible;
+    width: 100%;
     text-decoration: none;
 
     background: transparent;
@@ -28,7 +26,7 @@
     font-weight: 400;
     transition: all 200ms;
 
-    padding: 15px 5px;
+    padding: 15px 0px;
 
     display: inline-flex;
     justify-content: center;
@@ -50,6 +48,3 @@
   background: none;
 }
 
-.secondary {
-
-}

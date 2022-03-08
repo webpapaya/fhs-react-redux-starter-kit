@@ -9,7 +9,9 @@ export const SelectInputField = ({ name, options }) => {
       height: '50px'
     }),
     control: () => ({
-      height: '50px'
+      color: 'black',
+      border: 'black',
+      background: 'none'
     })
   }
 
