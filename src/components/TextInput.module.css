@@ -1,4 +1,10 @@
-input[type=password], input[type=text] {
+.inputfield {
+  display: flex;
+  flex-direction: column;
+  width: 25em;
+}
+
+input[type=password], input[type=text], input[type=number] {
   border-width: 1px;
   min-width: 20em;
   height: 2.5em;

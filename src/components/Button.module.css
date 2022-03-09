@@ -6,6 +6,7 @@
   background-color: white;
   font-family: monospace;
   margin-top: 1.5em;
+  min-width: 25em;
 }
 
 .button:focus {
