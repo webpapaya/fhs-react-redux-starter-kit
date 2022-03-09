@@ -1,15 +1,15 @@
 .labelContainer {
-    gap: 15px;
 }
 
 .inputfield {
     width: 90vw;
     max-width: 300px;
-    height: 20px;
+    height: 30px;
     border-style: solid;
     border-color: black;
     border-width: 1px;
     padding: 5px;
+    margin-bottom: 20px;
 }
 
 .lableText {
