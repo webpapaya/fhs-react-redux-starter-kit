@@ -18,6 +18,14 @@ export const MoneyTransactionList = () => {
       },
       amount: 10.4,
       isPaid: false
+    },
+    {
+      user: {
+        id: 3,
+        name: 'Kerstin'
+      },
+      amount: 90.0,
+      isPaid: false
     }
 
   ]
