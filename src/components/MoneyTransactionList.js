@@ -2,7 +2,7 @@ import React from 'react'
 import { TableRow } from './TableRow'
 
 export const MoneyTransactionList = () => {
-  const list = [
+  const moneyTransactions = [
     {
       user: {
         id: 1,
@@ -31,7 +31,7 @@ export const MoneyTransactionList = () => {
   ]
   return (
         <>
-            {list.map((element) => {
+            {moneyTransactions.map((element) => {
               return (
                     <TableRow key={element.user.id} userName={element.user.name} id={element.user.id} isPaid={element.isPaid} amount={element.amount}/>
               )
