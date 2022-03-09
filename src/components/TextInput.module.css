@@ -1,0 +1,9 @@
+input[type=password], input[type=text] {
+  border-width: 1px;
+  min-width: 20em;
+  height: 2.5em;
+  font-family: monospace;
+}
+label {
+  font-family: monospace;
+}
