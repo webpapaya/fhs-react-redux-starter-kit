@@ -13,8 +13,8 @@ export const SignUp = () => {
   }
 
   return (
-    <div className={styles.formularWrapper}>
-        <form className={styles.signinformular} onSubmit={handleSubmit}>
+      <div className={styles.formularWrapper}>
+          <form className={styles.signinformular} onSubmit={handleSubmit}>
             <InputField type="email" name="email" title="Email" onChange={(e) => setEmail(e.target.value)}/>
             <InputField type="password" name="password" title="Password" onChange={(e) => setPassword(e.target.value)}/>
             <Button isPrimary={true}>

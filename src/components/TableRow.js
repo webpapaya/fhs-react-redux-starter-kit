@@ -4,7 +4,7 @@ import { Button } from './Button'
 
 export const TableRow = ({ userName, isPaid, id, amount, setPaid }) => {
   const formatAmount = (num) => {
-    return `${num.toFixed(2)}$`
+    return num ? `${num.toFixed(2)}$` : ''
   }
 
   return (

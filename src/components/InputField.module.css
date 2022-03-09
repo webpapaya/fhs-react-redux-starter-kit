@@ -1,6 +1,3 @@
-.labelContainer {
-}
-
 .inputfield {
     width: 90vw;
     max-width: 300px;
@@ -9,9 +6,10 @@
     border-color: black;
     border-width: 1px;
     padding: 5px;
-    margin-bottom: 20px;
 }
 
 .lableText {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    margin-top: 0px;
+    margin-bottom: 30px;
 }

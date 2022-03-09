@@ -8,7 +8,7 @@ export const SelectInputField = ({ name, options }) => {
             <p className={styles.lableText}>{name}</p>
             <select name={name} id={name} className={styles.selectContainer}>
               <option value="" disabled={true} selected={true}>Select</option>
-              {options.map(option => {
+              {options && options.map(option => {
                 return (
                     <option key={option.id} value={option.id}>{option.name}</option>
                 )
