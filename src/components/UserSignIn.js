@@ -5,11 +5,11 @@ import { Link } from './Link'
 
 export const UserSignIn = () => {
   return (
-        <div>
-            <Inputfield label="Username" type="text"></Inputfield>
-            <Inputfield label="Password" type="password"></Inputfield>
-            <Button>Sign In</Button>
-            <Link link="#" name="Sign Up"></Link>
-        </div>
+    <div>
+      <Inputfield label="Email" type="email"></Inputfield>
+      <Inputfield label="Password" type="password"></Inputfield>
+      <Button>Sign In</Button>
+      <Link link="#" name="Sign Up"></Link>
+    </div>
   )
 }

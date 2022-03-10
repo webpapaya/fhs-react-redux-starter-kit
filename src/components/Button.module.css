@@ -1,7 +1,7 @@
 .button {
     /* button reset */
     border: none;
-    margin: 0;
+    margin: 2em 0;
     padding: 1.5em;
     width: 100%;
     overflow: visible;
