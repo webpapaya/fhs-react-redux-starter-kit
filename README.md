@@ -1,3 +1,5 @@
+Homework is done by **Anna Rettenbacher** and **Tanja Santner**
+
 # FHS React/Redux Starter Kit
 
 This a starter kit for students of the University of Applied Sciences Salzburg, for the lectures:
