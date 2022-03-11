@@ -1,12 +1,10 @@
 .button {
     /* button reset */
     border: none;
-    margin: 2em 0;
     padding: 1.5em;
     width: 100%;
     overflow: visible;
     text-decoration: none;
-
     background: transparent;
 
     /* inherit font & color from ancestor */
