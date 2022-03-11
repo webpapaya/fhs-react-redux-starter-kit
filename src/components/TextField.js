@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from './Inputfield.module.css'
+import styles from './TextField.module.css'
 
-export const Inputfield = ({ label, type }) => {
+export const TextField = ({ label, type }) => {
   return (
     <label className={`${styles.label}`}>
       {label}
