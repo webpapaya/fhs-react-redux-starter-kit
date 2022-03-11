@@ -24,3 +24,7 @@
 .amount{
     text-align: right;
 }
+
+.paid{
+    text-decoration: line-through;
+}
