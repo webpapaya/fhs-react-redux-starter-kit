@@ -3,9 +3,9 @@ import styles from './TextField.module.css'
 
 export const TextField = ({ label, type }) => {
   return (
-    <label className={`${styles.label}`}>
+    <label htmlFor={`${label.toLowerCase()}`} className={`${styles.label}`}>
       {label}
-      <input type={type} name={label.toLowerCase()} className={`${styles.input}`} />
+      <input type={type} name={label.toLowerCase()} id={label.toLowerCase()} className={`${styles.input}`} />
     </label>
   )
 }

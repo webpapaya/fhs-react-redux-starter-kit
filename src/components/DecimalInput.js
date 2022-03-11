@@ -3,9 +3,9 @@ import styles from './DecimalInput.module.css'
 
 export const DecimalInput = ({ label }) => {
   return (
-    <label className={`${styles.label}`}>
+    <label htmlFor={`${label.toLowerCase()}`} className={`${styles.label}`}>
       {label}
-      <input type="number" step=".01" name={label.toLowerCase()} className={`${styles.input}`} />
+      <input type="number" step=".01" name={label.toLowerCase()} id={label.toLowerCase()} className={`${styles.input}`} />
     </label>
   )
 }
