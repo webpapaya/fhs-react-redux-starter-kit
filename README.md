@@ -28,7 +28,7 @@ npm run start
 ```
 npm run start # starts storybook and the react app
 npm run start:app # starts the react app
-npm run start:storybook # starts storybook
+npm run storybook # starts storybook
 
 npm run build # builds storybook and the react app
 npm run build:app # builds the react app
