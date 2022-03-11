@@ -1,0 +1,12 @@
+.transactionlist{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transactionlist td {
+    border-top: 1px solid;
+}
+
+tr {
+    height: 4em;
+}

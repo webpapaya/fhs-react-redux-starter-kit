@@ -9,7 +9,7 @@ export const MoneyTransactionCreate = () => {
     <form className={`${styles.transaction}`}>
       <SelectInput label='User' id='user'></SelectInput>
       <DecimalInput label='Amount' id='amount'></DecimalInput>
-      <Button>Create</Button>
+      <Button onClick="Create Transaction">Create</Button>
     </form>
   )
 }
