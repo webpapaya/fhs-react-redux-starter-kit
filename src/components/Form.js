@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Form.module.css'
 import { DecimalInput, DropdownInput, EmailInput, PasswordInput } from './InputField'
 import { action } from '@storybook/addon-actions'
-import { Button, InfoButton, FormButton } from './Button'
+import { Button, InfoButton } from './Button'
 
 export const SignIn = () => {
   return (
@@ -11,8 +11,8 @@ export const SignIn = () => {
       <EmailInput id="email"></EmailInput>
       <label id="password">Password:</label>
       <PasswordInput id="password"></PasswordInput>
-      <Button onClick={action('clicked')}>Sign up</Button>
-      <InfoButton onClick={action('clicked')}>Sign in</InfoButton>
+      <Button onClick={action('clicked')}>Sign in</Button>
+      <InfoButton href="/SignUp">Sign up</InfoButton>
     </form>
   )
 }
@@ -24,8 +24,8 @@ export const SignUp = () => {
       <EmailInput id="email"></EmailInput>
       <label id="password">Password:</label>
       <PasswordInput id="password"></PasswordInput>
-      <Button onClick={action('clicked')}>Sign in</Button>
-      <InfoButton onClick={action('clicked')}>Sign up</InfoButton>
+      <Button onClick={action('clicked')}>Sign up</Button>
+      <InfoButton href="/SignIn">Sign in</InfoButton>
     </form>
   )
 }
@@ -38,10 +38,14 @@ export const CreateEntry = () => {
       <DropdownInput id="user"></DropdownInput>
       </div>
       <div className = {`${styles.labelInput}`}>
-      <label id="amount">Amount:</label>
+      <label htmlFor="amount">Amount:</label>
       <DecimalInput id="amount"></DecimalInput>
       </div>
-      <FormButton onClick={action('clicked')}>Create</FormButton>
+      <button type="submit" className = {`${styles.button}`}>Create</button>
     </form>
   )
 }
+
+// const handleSubmit = () => {
+//   alert('Create entry');
+// }

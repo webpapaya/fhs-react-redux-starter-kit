@@ -10,12 +10,11 @@ export const Button = ({ onClick, children }) => {
   )
 }
 
-export const InfoButton = ({ onClick, children }) => {
-  console.log(onClick)
+export const InfoButton = ({ page, children }) => {
   return (
-  <button onClick={onClick} className={`${styles.button} ${styles.primary} ${styles.info}`}>
+  <a href={page} className={`${styles.button} ${styles.primary} ${styles.info}`}>
     {children}
-  </button>
+  </a>
   )
 }
 
