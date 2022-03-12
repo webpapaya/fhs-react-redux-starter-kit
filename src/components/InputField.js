@@ -26,12 +26,34 @@ export const DecimalInput = (idField) => {
 }
 
 export const DropdownInput = (idField) => {
+  const users = [
+    {
+      id: 1,
+      name: 'Hansi',
+      amount: 10.45,
+      paid: true
+    },
+    {
+      id: 2,
+      name: 'Heidi',
+      amount: 10.45,
+      paid: false
+    },
+    {
+      id: 3,
+      name: 'Marianne',
+      amount: 10.45,
+      paid: false
+    }
+  ]
   return (
         <select name={idField} id={idField} className={`${styles.inputField}`}>
-            <option value="">Select</option>
-            <option value="lisa">Lisa</option>
-            <option value="vanessa">Vanessa</option>
-            <option value="thomas">Thomas</option>
+          <option value="">Select</option>
+          {users.map((user) => {
+            return (
+              <option key = {user.id} value={`${user.name}`}>{user.name}</option>
+            )
+          })}
         </select>
   )
 }

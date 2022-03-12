@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Button.module.css'
 
-export const Button = ({ onClick, children }) => {
+export const FormButton = ({ onClick, children }) => {
   console.log(onClick)
   return (
   <button onClick={onClick} className={`${styles.button} ${styles.primary}`}>
@@ -18,11 +18,17 @@ export const InfoButton = ({ page, children }) => {
   )
 }
 
-export const FormButton = ({ onClick, children }) => {
+export const Button = ({ onClick, children }) => {
   console.log(onClick)
   return (
   <button onClick={onClick} className={`${styles.button} ${styles.small}`}>
     {children}
   </button>
+  )
+}
+
+export const Placeholder = () => {
+  return (
+  <div className={`${styles.button} ${styles.placeholder}`}></div>
   )
 }
