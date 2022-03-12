@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Form.module.css'
 import { DecimalInput, DropdownInput, EmailInput, PasswordInput } from './InputField'
 import { action } from '@storybook/addon-actions'
-import { Button, InfoButton } from './Button'
+import { Button, InfoButton, FormButton } from './Button'
 
 export const SignIn = () => {
   return (
@@ -32,16 +32,16 @@ export const SignUp = () => {
 
 export const CreateEntry = () => {
   return (
-    <form className={`${styles.form}`}>
-      <div className = "labelInput">
+    <form className={`${styles.formHorizontal}`}>
+      <div className = {`${styles.labelInput}`}>
       <label htmlFor="user">User:</label>
       <DropdownInput id="user"></DropdownInput>
       </div>
-      <div className = "labelInput">
+      <div className = {`${styles.labelInput}`}>
       <label id="amount">Amount:</label>
       <DecimalInput id="amount"></DecimalInput>
       </div>
-      <Button onClick={action('clicked')}>Create</Button>
+      <FormButton onClick={action('clicked')}>Create</FormButton>
     </form>
   )
 }

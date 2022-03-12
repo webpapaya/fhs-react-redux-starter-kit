@@ -21,7 +21,7 @@ export const TextInput = (idField) => {
 
 export const DecimalInput = (idField) => {
   return (
-        <input type="number" id={idField} className={`${styles.inputField}`}></input>
+        <input type="number" id={idField} className={`${styles.inputField} ${styles.decimal}`}></input>
   )
 }
 

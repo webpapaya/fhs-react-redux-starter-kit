@@ -19,3 +19,11 @@ export const InfoButton = ({ onClick, children }) => {
   )
 }
 
+export const FormButton = ({ onClick, children }) => {
+  console.log(onClick)
+  return (
+  <button onClick={onClick} className={`${styles.button} ${styles.small}`}>
+    {children}
+  </button>
+  )
+}
