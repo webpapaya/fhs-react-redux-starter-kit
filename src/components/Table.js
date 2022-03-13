@@ -1,4 +1,5 @@
 import React from 'react'
+import { action } from '@storybook/addon-actions'
 import styles from './Table.module.css'
 import { Button, Placeholder } from './Button'
 
@@ -34,7 +35,7 @@ export const Table = (idField) => {
                                 <p>{user.amount}$</p>
 
                                     {user.paid && <Placeholder></Placeholder>}
-                                    {!user.paid && <Button>paid</Button>}
+                                    {!user.paid && <Button onClick={action('clicked')}>paid</Button>}
 
                             </div>
                         </tr>

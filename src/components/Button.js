@@ -29,6 +29,15 @@ export const Button = ({ onClick, children }) => {
 
 export const Placeholder = () => {
   return (
-  <div className={`${styles.button} ${styles.placeholder}`}></div>
+  <button className={`${styles.button} ${styles.placeholder}`}></button>
+  )
+}
+
+export const CreateEntryButton = ({ onClick, children }) => {
+  console.log(onClick)
+  return (
+  <button onClick={onClick} className={`${styles.button} ${styles.small} ${styles.entry}`}>
+    {children}
+  </button>
   )
 }

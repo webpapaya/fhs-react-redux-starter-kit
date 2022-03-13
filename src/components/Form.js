@@ -2,7 +2,9 @@ import React from 'react'
 import styles from './Form.module.css'
 import { DecimalInput, DropdownInput, EmailInput, PasswordInput } from './InputField'
 import { action } from '@storybook/addon-actions'
-import { FormButton, InfoButton } from './Button'
+import { FormButton, InfoButton, CreateEntryButton } from './Button'
+
+// Storybook error: Buttons are inside of a form --> try to send arguments via post request
 
 export const SignIn = () => {
   return (
@@ -41,11 +43,7 @@ export const CreateEntry = () => {
       <label htmlFor="amount">Amount:</label>
       <DecimalInput id="amount"></DecimalInput>
       </div>
-      <button type="submit" className = {`${styles.button}`}>Create</button>
+      <CreateEntryButton onClick={action('clicked')}>Create</CreateEntryButton>
     </form>
   )
 }
-
-// const handleSubmit = () => {
-//   alert('Create entry');
-// }
