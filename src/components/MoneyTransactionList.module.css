@@ -4,9 +4,6 @@
     font-family: monospace;
 }
 
-.transactionlist td {
-    border-top: 1px solid;
-}
 .transactionlist button {
     height: 3em;
     width: 10em;
@@ -16,4 +13,8 @@
 tr {
     height: 4em;
     padding: 0.5em;
+}
+table {
+    width: 90%;
+    margin: 0 auto;
 }
