@@ -1,8 +1,0 @@
-.transaction{
-    display: flex;
-    align-items: center;
-    gap: 1em;
-}
-.transaction button{
-    margin-top: 3em;
-}
