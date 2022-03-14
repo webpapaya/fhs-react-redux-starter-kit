@@ -5,8 +5,8 @@ import { Input } from './input'
 import styles from '../styles/signIn.module.css'
 
 export const SignIn = () => {
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
+  const [username, setUsername] = useState({ value: '', isError: false })
+  const [password, setPassword] = useState({ value: '', isError: false })
   const [isSubmitted, toggleSubmit] = useState(false)
   return (
     <>
@@ -14,20 +14,38 @@ export const SignIn = () => {
         className={styles.signinContainer}
         onSubmit={(e) => {
           e.preventDefault()
+          if (!username.value) {
+            setUsername((prev) => ({ ...prev, isError: true }))
+          } else {
+            setUsername((prev) => ({ ...prev, isError: false }))
+          }
+
+          if (!password.value) {
+            setPassword((prev) => ({ ...prev, isError: true }))
+          } else {
+            setPassword((prev) => ({ ...prev, isError: false }))
+          }
+
           toggleSubmit(!isSubmitted)
         }}
       >
         <Input
           name="Username"
           id="username"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
+          value={username.value}
+          isError={username.isError}
+          onChange={(e) =>
+            setUsername((prev) => ({ ...prev, value: e.target.value }))
+          }
         />
         <Input
           name="Password"
           id="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          value={password.value}
+          isError={password.isError}
+          onChange={(e) =>
+            setPassword((prev) => ({ ...prev, value: e.target.value }))
+          }
           type="password"
         />
         <div className={styles.buttonGroup}>
