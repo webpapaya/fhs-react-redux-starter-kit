@@ -4,10 +4,14 @@ import { Provider } from 'react-redux'
 import configureStore from './store'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
+import './action-creators/todos'
+
+const store = configureStore()
+global.store = store
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={configureStore()}>
+    <Provider store={store}>
       <App />
     </Provider>
   </React.StrictMode>,
