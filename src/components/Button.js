@@ -1,11 +1,7 @@
 import React from 'react'
-import styles from './Button.module.css'
 
-export const Button = ({ onClick, children }) => {
-  console.log(onClick)
+export const Button = ({ children, onClick }) => {
   return (
-  <button onClick={onClick} className={`${styles.button} ${styles.primary}`}>
-    {children}
-  </button>
+    <button onClick={onClick}>{children}</button>
   )
 }
