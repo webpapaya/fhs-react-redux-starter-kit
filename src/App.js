@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, useRef, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 
 const Overlay = () => {
@@ -14,10 +14,15 @@ const MoneyTransactionForm = ({ onMoneyTransactionAdd }) => {
     onMoneyTransactionAdd({ id: Math.random(), amount: 10 })
   }, [onMoneyTransactionAdd])
 
+  const myInputRef = useRef(null)
+  useEffect(() => {
+    myInputRef.current?.focus()
+  }, [myInputRef.current])
+
   return (
         <form onSubmit={onSubmit}>
             <Overlay />
-            <input />
+            <input ref={myInputRef} />
             <button>Add</button>
         </form>
   )
