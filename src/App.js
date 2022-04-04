@@ -1,47 +1,35 @@
-import React, { useState, useMemo, useCallback } from 'react'
+import React, { useState, useCallback } from 'react'
 
+const MoneyTransactionForm = ({ onMoneyTransactionAdd }) => {
+  const onSubmit = useCallback((evt) => {
+    evt.preventDefault()
+    onMoneyTransactionAdd({ id: Math.random(), amount: 10 })
+  }, [onMoneyTransactionAdd])
 
-const UserList = React.memo(({users}) => {
-    console.log('test')
-    return (
-        <ul>
-            {users.map((user) => {
-                return <li key={user.id}>{user.name}</li>
-            })}
-        </ul>
-    )
-})
+  return (
+        <form onSubmit={onSubmit}>
+            <input />
+            <button>Add</button>
+        </form>
+  )
+}
 
-function App() {
-    const [count, setCount] = useState(0)
-    const [users] = useState(Array.from({length: 10000}).flatMap((_, idx) => [
-        { id: idx, name: 'a', inactive: true },
-        { id: idx, name: 'b', inactive: false },
-        { id: idx, name: 'c', inactive: true }
-    ]))
+const MoneyTransactionList = ({ moneyTransactions }) => {
+  return <>{moneyTransactions.length}</>
+}
 
-    // Don't filter in component a new array will be returned on each
-    // rerender
-    // const activeUsers = users.filter((user) => !user.inactive)
+const App = () => {
+  const [moneyTransactions, setMoneyTransactions] = useState([])
+  const onMoneyTransactionAdd = useCallback((moneyTransaction) => {
+    setMoneyTransactions([...moneyTransactions, moneyTransaction])
+  }, [moneyTransactions, setMoneyTransactions])
 
-    // Do: Memoize filtering of component
-    const activeUsers = useMemo(() =>
-        users.filter((user) => !user.inactive),
-        [users]
-    )
-
-
-    const forceRerender = () => {
-        setCount(count + 1)
-    }
-
-    return (
+  return (
         <div>
-            <button onClick={forceRerender}>Test</button>
-            <UserList users={activeUsers} />
-
+            <MoneyTransactionForm onMoneyTransactionAdd={onMoneyTransactionAdd} />
+            <MoneyTransactionList moneyTransactions={moneyTransactions} />
         </div>
-    )
+  )
 }
 
 export default App
