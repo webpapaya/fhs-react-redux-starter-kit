@@ -1,6 +1,26 @@
 import React, { useState, useCallback, useRef, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 
+
+
+class ErrorBoundary extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { hasError: false }
+    }
+
+    static getDerivedStateFromError() {
+        return { hasError: true }
+    }
+
+    render() {
+        if (this.state.hasError) {
+            return <h1>An Error occurred</h1>
+        }
+        return this.props.children
+    }
+}
+
 const Overlay = () => {
   return createPortal(
         <div>My Overlay</div>,
@@ -19,12 +39,14 @@ const MoneyTransactionForm = ({ onMoneyTransactionAdd }) => {
     myInputRef.current?.focus()
   }, [myInputRef.current])
 
+  throw new Error()
+
   return (
-        <form onSubmit={onSubmit}>
-            <Overlay />
-            <input ref={myInputRef} />
-            <button>Add</button>
-        </form>
+    <form onSubmit={onSubmit}>
+        <Overlay />
+        <input ref={myInputRef} />
+        <button>Add</button>
+    </form>
   )
 }
 
@@ -39,10 +61,12 @@ const App = () => {
   }, [moneyTransactions, setMoneyTransactions])
 
   return (
+      <ErrorBoundary>
         <div>
             <MoneyTransactionForm onMoneyTransactionAdd={onMoneyTransactionAdd} />
             <MoneyTransactionList moneyTransactions={moneyTransactions} />
         </div>
+      </ErrorBoundary>
   )
 }
 
