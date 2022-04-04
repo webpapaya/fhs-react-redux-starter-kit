@@ -1,4 +1,12 @@
 import React, { useState, useCallback } from 'react'
+import { createPortal } from 'react-dom'
+
+const Overlay = () => {
+  return createPortal(
+        <div>My Overlay</div>,
+        document.getElementById('overlay')
+  )
+}
 
 const MoneyTransactionForm = ({ onMoneyTransactionAdd }) => {
   const onSubmit = useCallback((evt) => {
@@ -8,6 +16,7 @@ const MoneyTransactionForm = ({ onMoneyTransactionAdd }) => {
 
   return (
         <form onSubmit={onSubmit}>
+            <Overlay />
             <input />
             <button>Add</button>
         </form>
