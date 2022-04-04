@@ -1,30 +1,45 @@
-import React, { useState } from 'react'
+import React, { useState, useMemo, useCallback } from 'react'
 
 
 const UserList = React.memo(({users}) => {
+    console.log('test')
     return (
         <ul>
             {users.map((user) => {
-                return <li>{user}</li>
+                return <li key={user.id}>{user.name}</li>
             })}
         </ul>
     )
 })
 
 function App() {
-    const [state, setState] = useState({ users: ['a', 'b', 'c'] })
-    const onUpdateUser = () => {
-        // Don't push to state.users
-        state.users.push('d')
+    const [count, setCount] = useState(0)
+    const [users] = useState(Array.from({length: 10000}).flatMap((_, idx) => [
+        { id: idx, name: 'a', inactive: true },
+        { id: idx, name: 'b', inactive: false },
+        { id: idx, name: 'c', inactive: true }
+    ]))
 
-        // Do spread users and create new array
-        setState({ ...state, users: [...state.users, 'd'] })
+    // Don't filter in component a new array will be returned on each
+    // rerender
+    // const activeUsers = users.filter((user) => !user.inactive)
+
+    // Do: Memoize filtering of component
+    const activeUsers = useMemo(() =>
+        users.filter((user) => !user.inactive),
+        [users]
+    )
+
+
+    const forceRerender = () => {
+        setCount(count + 1)
     }
 
     return (
         <div>
-            <UserList users={state.users} />
-            <button onClick={onUpdateUser}>Test</button>
+            <button onClick={forceRerender}>Test</button>
+            <UserList users={activeUsers} />
+
         </div>
     )
 }
